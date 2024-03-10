@@ -1,0 +1,4 @@
+services:
+  worky:
+    build: .
+    command: python BotCore.py
