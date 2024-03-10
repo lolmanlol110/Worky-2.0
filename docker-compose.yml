@@ -2,3 +2,5 @@ services:
   worky:
     build: .
     command: python BotCore.py
+    volumes:
+      - "./BotPlugins/:/usr/src/app/BotPlugins/"

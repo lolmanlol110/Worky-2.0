@@ -6,7 +6,6 @@ import config
 import Views.PluginsView as plugView
 
 from Utils.Paginator import Paginator
-from discord import option
 
 bot = discord.Bot(intents=discord.Intents.all())
 asyncio.run(plugins.LoadPlugins(bot))
