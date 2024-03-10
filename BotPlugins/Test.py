@@ -1,7 +1,8 @@
 from plugins import Plugin
 import discord
-from discord import commands
+from discord.ext import commands
 
+# import discord.commands
 
 class Test(Plugin):  # производим наш плагин от родительского класса
     Name = 'Test v0.1'
