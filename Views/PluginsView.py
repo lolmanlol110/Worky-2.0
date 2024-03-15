@@ -19,7 +19,7 @@ class UpdatePlugins(discord.ui.Button):
             for Name, plugin in self.plugins.Plugins.items():
                 arr[0][0] = f"{arr[0][0]}\n1. {plugin.Name}"
                 arr.append(
-                    [f"## {plugin.Name} ##\n{plugin.Discription}",
+                    [f"## {plugin.Name} ##\n{plugin.Discription}\n**Истинное имя:**\n{plugin.TrueName}",
                      [UpdatePlugins(self.plugins, self.bot), RemovePlugin(self.plugins, Name, self.bot)]])
 
         await Paginator(arr).send(interaction.response)
@@ -42,7 +42,7 @@ class RemovePlugin(discord.ui.Button):
             for Name, plugin in self.plugins.Plugins.items():
                 arr[0][0] = f"{arr[0][0]}\n1. {plugin.Name}"
                 arr.append(
-                    [f"## {plugin.Name} ##\n{plugin.Discription}",
+                    [f"## {plugin.Name} ##\n{plugin.Discription}\n**Истинное имя:**\n{plugin.TrueName}",
                      [UpdatePlugins(self.plugins, self.bot), RemovePlugin(self.plugins, Name, self.bot)]])
 
         await Paginator(arr).send(interaction.response)

@@ -10,6 +10,7 @@ class Test(Plugin):  # производим наш плагин от родит�
     # global client
     # client = None
 
+
     class Button(discord.ui.View):
         def __init__(self, data):
             super().__init__(timeout=0)
@@ -25,12 +26,9 @@ class Test(Plugin):  # производим наш плагин от родит�
 
     # При загрузке
     async def OnLoad(self):
-        # global client
-
-        # await self.bot.register_command(self._hui)
         self.bot.add_cog(self.Greetings(self.bot))
-        # print(self.bot)
         print('Плагин Test v0.1 Зпущен!')
     # при выключении
     async def onDisable(self):
+        self.bot.remove_cog('Greetings')
         print("'Test v0.1' был отключен!")

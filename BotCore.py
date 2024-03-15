@@ -22,7 +22,7 @@ async def _plugins(ctx):
 
         arr[0][0] = f"{arr[0][0]}\n1. {plugin.Name}"
         arr.append(
-            [f"## {plugin.Name} ##\n{plugin.Discription}",
+            [f"## {plugin.Name} ##\n{plugin.Discription}\n**Истинное имя:**\n{plugin.TrueName}",
             [plugView.UpdatePlugins(plugins, bot), plugView.RemovePlugin(plugins, Name, bot)]])
 
     await Paginator(arr).send(ctx.interaction.response)
